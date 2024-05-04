@@ -1,0 +1,48 @@
+.pkm-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center
+}
+
+
+.caracteristics-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.caracteristics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 500px;
+    border-radius: 150px;
+}
+.pkm-img {
+    padding: 30px;
+    border-radius: 300px;
+    background-image: url("/src/static/images/Pokeball-gray.png");
+    background-color: whitesmoke;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+
+
+
+@media (max-width: 1000px) {   
+    .display-pokemon .caracteristics-container {     
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .caracteristics {
+        width: 80%;
+    }
+    .pkm-img {
+        width: 80%;
+    }  
+}

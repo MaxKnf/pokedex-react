@@ -1,0 +1,60 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+
+.all-pokemons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.pokemon-list {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.pokemon-item {
+    width: 12%;
+    margin: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.pkm-list-img {
+    width: 100%;
+}
+
+@media (max-width: 1500px) {   
+    .pokemon-item {     
+        width: 20%;
+    }  
+}
+
+@media (max-width: 900px) {   
+    .pokemon-item {     
+        width: 25%;
+    }  
+}
+
+@media (max-width: 700px) {   
+    .pokemon-item {     
+        width: 40%;
+    }  
+}
+
+@media (max-width: 450px) {   
+    .pokemon-item {     
+        width: 90%;
+    }  
+}
