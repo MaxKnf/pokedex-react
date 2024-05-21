@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { TypesList } from './TypesList';
 import pokeballgrey from "../static/images/Pokeball-gray.png"
 import "./style/DisplayPokemon.css"
@@ -46,8 +46,8 @@ function DisplayPokemon() {
   return (
     <div className='display-pokemon' style={{ backgroundColor, padding: "150px 0px", color:"white", display:"flex", flexDirection:"column", alignItems:"strech", flexWrap:"nowrap" }}>
       <div className='pkm-header'>
-        <a href={parsedId-2} className='w3-btn w3-round-xxlarge' style={{fontSize:"1.4rem"}}><i class="fa fa-arrow-left"></i></a>
-        <h1 style={{textTransform:"uppercase", fontFamily: "Lexend", fontSize:"3rem", margin:"20px 0px" }}>{pokemonData.name}</h1><a href={parsedId} className='w3-btn w3-round-xxlarge' style={{fontSize:"1.4rem"}}><i class="fa fa-arrow-right"></i></a> 
+        <Link to={parsedId === 1 ? '#' : `/pokemons/${parsedId-2}`} className='w3-btn w3-round-xxlarge' style={{fontSize:"1.4rem"}}><i class="fa fa-arrow-left"></i></Link>
+        <h1 style={{textTransform:"uppercase", fontFamily: "Lexend", fontSize:"3rem", margin:"20px 0px" }}>{pokemonData.name}</h1><Link to={`/pokemons/${parsedId}`} className='w3-btn w3-round-xxlarge' style={{fontSize:"1.4rem"}}><i class="fa fa-arrow-right"></i></Link> 
       </div>
       
       <div className='caracteristics-container' >
